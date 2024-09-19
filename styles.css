@@ -1,199 +1,220 @@
+/* Universal Styles */
+* {
+    background-color: #1E1E1E; /* Dark background */
+    color: #ECECEC; /* Light text */
+    font-family: 'Arial', 'Helvetica', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-*{
-    background-color:  rgba(243, 239, 239, 0.787);
-    color: rgb(3, 5, 87);
-    font-family: Arial, Helvetica, sans-serif;
+#textImg, #doneImg, #optionsImg, #waitImg {
+    width: 12%;
+    margin: 10px auto;
+    display: block;
+    transition: transform 0.3s, background-color 0.3s;
+    background-color: #F0F0F0; /* Light background */
+    border-radius: 50%; /* Circular setting */
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Shadow for depth */
 }
-h2{
-    /* color: black; */
+
+#textImg:hover, #doneImg:hover, #optionsImg:hover, #waitImg:hover {
+    transform: scale(1.1); /* Slight zoom on hover */
+    background-color: #E0E0E0; /* Lighter hover background */
+}
+
+/* Assuming .txt content is wrapped inside a class like .txt-content */
+.txt-content {
+    font-size: small;
+    font-family: 'Courier New', Courier, monospace; /* Monospace for code-like appearance */
+    background-color: #2B2B2B; /* Slightly lighter dark background */
+    padding: 10px;
+    border-radius: 5px;
+    color: #B0BEC5; /* Softer text color for readability */
+    word-wrap: break-word; /* Ensures long text doesn't overflow */
+}
+
+/* Centering Layout */
+body, html {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Headers */
+h2 {
     font-style: italic;
-    /* text-decoration: underline;    */
+    color: #FF7043; /* Bright orange accent */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
 }
-h3{
-    color: black;
+
+h3 {
+    color: #42A5F5; /* Soft blue */
     font-style: italic;
     text-decoration: underline;
 }
+
+/* Heading */
 #heading {
-    margin-left: 1%;
-    margin-right: 1%;
-    font-size: 130%;
-}
-.align{
-    /* padding: 1.5%; */
-    padding-left: 17%;
-    padding-right: 12%;
-    padding-bottom: 0.05%;
-    /* background-color: rgb(182, 179, 179); */
-    font-size: medium;
-    
-}
-.bigdiv{
-    margin-left: 5%;
-    margin-right: 5%;
-    /* border: rgb(0, 0, 0) solid 2px; */
-    
-    /* background-color: rgb(182, 179, 179) ; */
-}
-
-.links{
-    color: rgb(11, 11, 251);
-    background-color: rgb(189, 201, 206);
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    /* font-weight:+ bold; */
-    font-size: large;
-}
-.links:hover{
-    color: rgb(3, 3, 128);
-    background-color: rgb(2, 158, 158);
-}
-
-.form{
-    /* background-color: rgb(182, 179, 179) ; */
-    font-family: Arial, Helvetica, sans-serif;
-    /* font-size: x-small; */
-    display: inline-block;
-}
-.input{
-    font-size: x-small;
-    /* background-color: rgb(182, 179, 179); */
-}
-
-#text1{
-    font-size: xx-small;
-    /* background-color: rgb(182, 179, 179) ; */
-}
-#text4{
-    font-size: small;
-}
-/* #encode{
-    background-color: rgb(97, 153, 97);
-} */
-/* #decode{
-    background-color: rgb(172, 75, 75);
-} */
-#encode:disabled{
-    background-color: rgb(182, 179, 179);
-}
-#decode:disabled{
-    background-color: rgb(182, 179, 179);
-}
-.button{
-    font-size: small;
+    font-size: 140%;
+    text-align: center;
     font-weight: bold;
-    color: black;
-    background-color: rgb(142, 180, 250);
-    /* background-color: cyan; */
+    padding: 15px;
+    background-color: #292929; /* Darker gray */
+    color: #FFC107; /* Bright yellow for contrast */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px;
 }
-.button:disabled{
-    color: rgb(56, 54, 54);
+
+/* Layout and Alignment */
+.align {
+    padding: 2% 10%;
+    font-size: medium;
+    background-color: #37474F; /* Muted blue-gray */
+    border-radius: 12px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    text-align: center;
 }
-.text{
+
+.align:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7);
+}
+
+.bigdiv {
+    margin: 3% 5%;
+    background-color: #455A64; /* Soft dark blue-gray */
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+    transition: box-shadow 0.3s ease-in-out;
+    text-align: center;
+}
+
+.bigdiv:hover {
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.7);
+}
+
+/* Links */
+.links {
+    color: #81D4FA; /* Soft blue */
+    background-color: #2E3A45; /* Darker muted blue */
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: large;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+
+.links:hover {
+    color: #ECEFF1; /* Lighter hover text */
+    background-color: #546E7A; /* Darker blue-gray on hover */
+    transform: scale(1.05);
+}
+
+/* Forms */
+.form {
+    font-family: Arial, Helvetica, sans-serif;
+    display: inline-block;
+    padding: 15px;
+    background-color: #333333; /* Dark form background */
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.input {
     font-size: small;
-}
-.text2{
-    /* background-color: rgb(182, 179, 179); */
-    font-size: small;
-}
-#link1{
-    font-size: smaller;
-}
-#textImg{
-    width: 10%;
-    margin-left: 30%;
-    /* background-color: rgb(182, 179, 179); */
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #B0BEC5;
+    background-color: #2C2C2C; /* Slightly lighter for input fields */
+    color: #ECECEC;
 }
 
-#doneImg{
-    width: 9.5%;
-    margin-left: 30.5%;
-    /* background-color: rgb(182, 179, 179); */
+/* Buttons */
+.button {
+    font-size: medium;
+    font-weight: bold;
+    color: #ECECEC;
+    background-color: #607D8B; /* Muted button color */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
 }
 
-#optionsImg{
-    width: 14%;
-    margin-left: 28.5%;
-    /* background-color: rgb(182, 179, 179); */
+.button:hover {
+    background-color: #42A5F5; /* Brighter blue on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7);
 }
 
-#waitImg{
-    width: 14%;
-    margin-left: 29%;
-    /* background-color: rgb(182, 179, 179); */
+.button:disabled {
+    color: #B0BEC5;
+    background-color: #757575; /* Disabled button */
 }
-@media(min-width:740px){
+
+/* Images */
+#textImg, #doneImg, #optionsImg, #waitImg {
+    width: 12%;
+    margin: 10px auto;
+    display: block;
+    transition: transform 0.3s;
+}
+
+#textImg:hover, #doneImg:hover, #optionsImg:hover, #waitImg:hover {
+    transform: scale(1.1);
+}
+
+/* Media Queries */
+@media (min-width: 740px) {
     #heading {
-        margin-left: 12%;
-        margin-right: 10%;
         font-size: 150%;
     }
-    #encode{
-        margin-left: 4%;
-    }
-    .button{
+    .button {
         font-size: medium;
     }
-    .bigdiv{
+    .bigdiv {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    .align {
+        font-size: large;
+    }
+    .text {
+        font-size: medium;
+    }
+    .input {
+        font-size: small;
+    }
+}
+
+@media (min-width: 1090px) {
+    #heading {
+        font-size: 165%;
+    }
+    .text {
         margin-left: 15%;
         margin-right: 15%;
     }
-    .align{
-        font-size: large;
-    }
-    .text{
-        font-size: medium;
-        margin-left: 12%;
-        margin-right: 3%;
-    }
-    #text1{
-        font-size: x-small;
-    }
-    .text2{
-        font-size: medium;
-    }
-    #text4{
-        font-size: medium;
-    }
-    .input{
-        font-size: small;
-    }
-    #link1{
-        font-size: large;
-    }
-}
-@media(min-width:1090px){
-    #heading {
-        margin-left: 17%;
-        margin-right: 11%;
-        font-size: 165%;
-    }
-    #encode{
-        margin-left: 4%;
-    }
-    .text{
-        margin-left: 25%;
+    .bigdiv {
+        margin-left: 15%;
         margin-right: 15%;
     }
-    #text1{
-        font-size: small;
-    }
-    .bigdiv{
-        margin-left: 19%;
-        margin-right: 15%;
-    }
-    .button{
+    .button {
         font-size: large;
-        margin-left: 1.5%;
-        margin-right: 1.5%;
     }
-    .align{
-        padding-left:23% ;
-        padding-right: 20%;
+    .align {
+        padding-left: 10%;
+        padding-right: 10%;
         font-size: x-large;
     }
-    .text2{
+    .text2 {
         font-size: large;
     }
 }
-
-
